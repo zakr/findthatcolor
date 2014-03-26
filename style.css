@@ -1,4 +1,23 @@
-#yourColor, #toFind{
-  height: 100px;
-  width: 100px;
+body, h1, h2, h3, h4, h5, h6{
+	font-family:"jaf-facitweb","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+.colorcontainer{
+	padding: 0;
+}
+
+.colorblock{
+  height: 400px;
+}
+
+.rgb-bar{
+ margin-bottom: 25px;
+}
+
+.restart{
+	background-color: #6c71c4;
+	margin-top: 5px;
+}
+.rgb-name{
+	text-align: center;
 }
