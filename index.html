@@ -14,13 +14,13 @@
   <body>
     
     <div class="row">
-      <div class="small-10 columns">
+      <div class="small-9 columns">
         <h1>Find That Color!</h1>
-        <h2><small>You need to match the color on the left.</small></h3>
+        <p>You need to match the color on the left.</p>
         <p>Use the buttons to add more or less of red, green &#38; blue</p>
       </div>
-      <div class="small-2 columns">
-      <input class="tiny button radius restart" id='newColor' type='button' value="Give me a new color!">
+      <div class="small-3 columns">
+      <input class="tiny button radius restart" id='newColor' type='button' value="New Color">
       </div>
     </div>
 
@@ -32,20 +32,26 @@
 
     <div class="row">
       <div class="small-6 columns colorcontainer">
-        <div id='yourColor' class="colorblock"></div>
+        <div id='toFind' class="colorblock"></div>
       </div>
       <div class="small-6 columns colorcontainer">
-        <div id='toFind' class="colorblock"></div>
+        <div id='yourColor' class="colorblock"></div>
       </div>
     </div>
 
     <div class="row rgb-bar">
       <div class="small-4 columns">
         <h4 class="rgb-name">Red</h4>
-        <input id='redJumpBackward' type='button' value='<<'>
-        <input id='redStepBackward' type='button' value='<'>
-        <input id='redStepForward' type='button' value='>'>
-        <input id='redJumpForward' type='button' value='>>'>
+        <ul class="button-group rgb-buttons">
+          <input id='redJumpBackward' type='button' value='<<'>
+          <input id='redStepBackward' type='button' value='<'>
+          <input id='redStepForward' type='button' value='>'>
+          <input id='redJumpForward' type='button' value='>>'>
+        </ul>
+        
+        
+        
+        
         <!-- <span id='red'></span> -->
       </div>
       <div class="small-4 columns">
