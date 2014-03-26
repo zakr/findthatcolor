@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="//use.typekit.net/nxd0nlr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find That Color</title>
@@ -11,43 +13,64 @@
   </head>
   <body>
     
-    <div id='yourColor'></div>
-    <input id='found' type='button' value="I think I've found it!">
-    <br>
-    <br>
-    
-    <div>
-      <input id='redJumpBackward' type='button' value='<<'>
-      <input id='redStepBackward' type='button' value='<'>
-      <span>Red</span>
-      <input id='redStepForward' type='button' value='>'>
-      <input id='redJumpForward' type='button' value='>>'>
-      <span id='red'></span>
+    <div class="row">
+      <div class="small-10 columns">
+        <h1>Find That Color!</h1>
+        <h2><small>You need to match the color on the left.</small></h3>
+        <p>Use the buttons to add more or less of red, green &#38; blue</p>
+      </div>
+      <div class="small-2 columns">
+      <input class="tiny button radius restart" id='newColor' type='button' value="Give me a new color!">
+      </div>
     </div>
-    <div>
-      <input id='greenJumpBackward' type='button' value='<<'>
-      <input id='greenStepBackward' type='button' value='<'>
-      <span>Green</span>
-      <input id='greenStepForward' type='button' value='>'>
-      <input id='greenJumpForward' type='button' value='>>'>
-      <span id='green'></span>
+
+    <div class="row">
+      <div class="small-12 columns">
+
+      </div>
     </div>
-    <div>
-      <input id='blueJumpBackward' type='button' value='<<'>
-      <input id='blueStepBackward' type='button' value='<'>
-      <span>Blue</span>
-      <input id='blueStepForward' type='button' value='>'>
-      <input id='blueJumpForward' type='button' value='>>'>
-      <span id='blue'></span>
+
+    <div class="row">
+      <div class="small-6 columns colorcontainer">
+        <div id='yourColor' class="colorblock"></div>
+      </div>
+      <div class="small-6 columns colorcontainer">
+        <div id='toFind' class="colorblock"></div>
+      </div>
+    </div>
+
+    <div class="row rgb-bar">
+      <div class="small-4 columns">
+        <h4 class="rgb-name">Red</h4>
+        <input id='redJumpBackward' type='button' value='<<'>
+        <input id='redStepBackward' type='button' value='<'>
+        <input id='redStepForward' type='button' value='>'>
+        <input id='redJumpForward' type='button' value='>>'>
+        <!-- <span id='red'></span> -->
+      </div>
+      <div class="small-4 columns">
+        <h4 class="rgb-name">Green</h4>
+        <input id='greenJumpBackward' type='button' value='<<'>
+        <input id='greenStepBackward' type='button' value='<'>
+        <input id='greenStepForward' type='button' value='>'>
+        <input id='greenJumpForward' type='button' value='>>'>
+        <!-- <span id='green'></span> -->
+      </div>
+      <div class="small-4 columns">
+        <h4 class="rgb-name">Blue</h4>      
+        <input id='blueJumpBackward' type='button' value='<<'>
+        <input id='blueStepBackward' type='button' value='<'>
+        <input id='blueStepForward' type='button' value='>'>
+        <input id='blueJumpForward' type='button' value='>>'>
+        <!-- <span id='blue'></span> -->
+      </div>
     </div>
     
-    <br>
-    <div>Find this color:</div>
-    <div id='toFind'></div>
-    <input id='newColor' type='button' value="Give me a new one!">
-    
-    <br>
-    <br>
+    <div class="row">
+      <div class="small-12 columns">
+       <input class="button expand" id='found' type='button' value="I found it!">  
+      </div>
+    </div>
     <div id='result'></div>
     <div id='resultText'></div>
     <div id='helpText'></div>
