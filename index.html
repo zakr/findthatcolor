@@ -28,90 +28,80 @@
     </div>
 
     <div class="row">
-      <div class="large-2 columns">
-        <p class="pop">Instructions</p>
-      </div>
-      <div class="large-10 columns instructions">
-        <p>You need to match the color on the left. Use the buttons to add more or less of red, green &#38; blue</p>
+      <div class="small-12 columns instructions">
+        <p><span class="pop">Instructions:</span> You need to match the color on the left. Use the buttons to add more or less of red, green &#38; blue</p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="small-6 columns colorcontainer">
+    <div class="row color-container">
+      <div class="small-6 columns color-box">
         <div id='toFind' class="colorblock"></div>
       </div>
-      <div class="small-6 columns colorcontainer">
+      <div class="small-6 columns color-box">
         <div id='yourColor' class="colorblock"></div>
       </div>
     </div>
 
-    <div class="row rgb-bar">
-      <div class="small-4 columns">
-      <h4 class="rgb-name text-center">Red</h4>
-        <ul class="button-group rgb-buttons text-center">
-          <button class="button tiny" id='redJumpBackward' type='button' >
-            <i class="fi-minus"></i> <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='redStepBackward' type='button' >
-            <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='redStepForward' type='button' >
-            <i class="fi-plus"></i>
-          </button>
-          <button class="button tiny" id='redJumpForward' type='button' >
-            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
-          </button>
-        </ul>
-        
-        
-        
-        
-        <!-- <span id='red'></span> -->
+      <div class="row rgb-bar">
+        <div class="small-4 columns">
+          <h4 class="rgb-name text-center">Red</h4>
+            <ul class="button-group rgb-buttons text-center">
+              <button class="button tiny" id='redJumpBackward' type='button' >
+                <i class="fi-minus"></i> <i class="fi-minus"></i>
+              </button>
+              <button class="button tiny" id='redStepBackward' type='button' >
+                <i class="fi-minus"></i>
+              </button>
+              <button class="button tiny" id='redStepForward' type='button' >
+                <i class="fi-plus"></i>
+              </button>
+              <button class="button tiny" id='redJumpForward' type='button' >
+                <i class="fi-plus"></i> <i class="fi-plus"></i>
+              </button>
+            </ul>
+        </div>
+        <div class="small-4 columns">
+          <h4 class="rgb-name text-center">Green</h4>
+          <ul class="button-group rgb-buttons text-center">
+            <button class="button tiny" id='greenJumpBackward' type='button' >
+              <i class="fi-minus"></i> <i class="fi-minus"></i>
+            </button>
+            <button class="button tiny" id='greenStepBackward' type='button' >
+              <i class="fi-minus"></i>
+            </button>
+            <button class="button tiny" id='greenStepForward' type='button' >
+              <i class="fi-plus"></i>
+            </button>
+            <button class="button tiny" id='greenJumpForward' type='button' >
+              <i class="fi-plus"></i> <i class="fi-plus"></i>
+            </button>
+          </ul>
+        </div>
+        <div class="small-4 columns">
+          <h4 class="rgb-name text-center">Blue</h4>
+          <ul class="button-group rgb-buttons text-center">
+            <button class="button tiny" id='blueJumpBackward' type='button' >
+              <i class="fi-minus"></i> <i class="fi-minus"></i>
+            </button>
+            <button class="button tiny" id='blueStepBackward' type='button' >
+              <i class="fi-minus"></i>
+            </button>
+            <button class="button tiny" id='blueStepForward' type='button' >
+              <i class="fi-plus"></i>
+            </button>
+            <button class="button tiny" id='blueJumpForward' type='button' >
+              <i class="fi-plus"></i> <i class="fi-plus"></i>
+            </button>
+          </ul>
+        </div>
       </div>
-      <div class="small-4 columns">
-        <h4 class="rgb-name text-center">Green</h4>
-        <ul class="button-group rgb-buttons text-center">
-          <button class="button tiny" id='greenJumpBackward' type='button' >
-            <i class="fi-minus"></i> <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='greenStepBackward' type='button' >
-            <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='greenStepForward' type='button' >
-            <i class="fi-plus"></i>
-          </button>
-          <button class="button tiny" id='greenJumpForward' type='button' >
-            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
-          </button>
-        </ul>
-        <!-- <span id='green'></span> -->
+      
+      <div class="row">
+        <div class="small-12 columns">
+         <button class="button expand" id='found' type='button'>Does my color match?</button> 
+        </div>
       </div>
-      <div class="small-4 columns">
-        <h4 class="rgb-name text-center">Blue</h4>
-        <ul class="button-group rgb-buttons text-center">
-          <button class="button tiny" id='blueJumpBackward' type='button' >
-            <i class="fi-minus"></i> <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='blueStepBackward' type='button' >
-            <i class="fi-minus"></i>
-          </button>
-          <button class="button tiny" id='blueStepForward' type='button' >
-            <i class="fi-plus"></i>
-          </button>
-          <button class="button tiny" id='blueJumpForward' type='button' >
-            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
-          </button>
-        </ul>      
 
-        <!-- <span id='blue'></span> -->
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="small-12 columns">
-       <button class="button expand" id='found' type='button'>Does my color match?</button> 
-      </div>
-    </div>
     <div id='result'></div>
     <div id='resultText'></div>
     <div id='helpText'></div>

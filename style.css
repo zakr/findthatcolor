@@ -2,21 +2,28 @@ body, h1, h2, h3, h4, h5, h6, button, .button{
 	font-family:"europa","Avenir Next","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
 
+body{
+	background-image: url('images/bgnoise_lg.png');
+}
+
 .heading{
 	margin-top: 30px;
 }
-.instructions{
-    padding: 5px;
+
+.pop, .site-title{
+    font-weight: 700;
 }
+
 .pop{
-    text-align: center;
-    background-color: rgb(211,54,130);
-    color:#ffffff;
-    padding:5px 5px;
-    border: 1px solid rgba(211,54,130,0.5);
-    border-radius: 2px;
+    color: rgb(211,54,130);
 }
-.colorcontainer{
+
+.color-container, .rgb-bar{
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.color-box{
 	padding: 0;
 }
 
