@@ -45,3 +45,10 @@ body, h1, h2, h3, h4, h5, h6, button, .button{
 .site-title{
     font-size:1.85rem;
 }
+
+#toFind{
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 400px;
+}
