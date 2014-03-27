@@ -1,6 +1,10 @@
 body, h1, h2, h3, h4, h5, h6, button, .button{
 	font-family:"europa","Avenir Next","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
+
+.heading{
+	margin-top: 30px;
+}
 .instructions{
     padding: 5px;
 }

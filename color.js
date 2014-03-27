@@ -1,3 +1,27 @@
+var EventUtil = {
+
+  addHandler: function(element, type, handler){
+    if (element.addEventListener){
+        element.addEventListener(type, handler, false);
+    } else if (element.attachEvent){
+      element.attachEvent("on" + type, handler);
+    } else {
+      element[ "on" + "type" ] = handler;
+    }
+  },
+
+  removeHandler: function(element, type, handler){
+    if (element.removeEventListener) {
+       element.removeEventListener(type, handler, false);
+    } else if (element.detachEvent){
+       element.detachEvent("on" + type, handler);
+    } else {
+      element[ "on" + "type" ] = null;
+    }
+  }
+}
+
+
 window.onload = function(){
 
 	var r = 0;
@@ -17,9 +41,9 @@ window.onload = function(){
       g = 0;
       b = 0;
 
-      document.getElementById('red').innerHTML = r;
-      document.getElementById('green').innerHTML = g;
-      document.getElementById('blue').innerHTML = b;
+      // document.getElementById('red').innerHTML = r;
+      // document.getElementById('green').innerHTML = g;
+      // document.getElementById('blue').innerHTML = b;
     }
 
     reset();
@@ -28,9 +52,9 @@ window.onload = function(){
      var color = '#' + padZeros(r.toString(16),2) + padZeros(g.toString(16),2) + padZeros(b.toString(16),2);
      document.getElementById('yourColor').style.backgroundColor = color;
 
-      document.getElementById('red').innerHTML = r;
-      document.getElementById('green').innerHTML = g;
-      document.getElementById('blue').innerHTML = b;
+      // document.getElementById('red').innerHTML = r;
+      // document.getElementById('green').innerHTML = g;
+      // document.getElementById('blue').innerHTML = b;
     }
 
     function randomColor(){
