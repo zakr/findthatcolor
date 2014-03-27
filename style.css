@@ -5,14 +5,13 @@ body, h1, h2, h3, h4, h5, h6, button, .button{
 .heading{
 	margin-top: 30px;
 }
-.instructions{
 
-}
-.pop{
-    text-align: center;
-    color: rgb(211,54,130);
+.pop, .site-title{
     font-weight: 700;
-    border-radius: 2px;
+}
+
+.pop{
+    color: rgb(211,54,130);
 }
 .colorcontainer{
 	padding: 0;
