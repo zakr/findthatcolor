@@ -1,3 +1,27 @@
+var EventUtil = {
+
+  addHandler: function(element, type, handler){
+    if (element.addEventListener){
+        element.addEventListener(type, handler, false);
+    } else if (element.attachEvent){
+      element.attachEvent("on" + type, handler);
+    } else {
+      element[ "on" + "type" ] = handler;
+    }
+  },
+
+  removeHandler: function(element, type, handler){
+    if (element.removeEventListener) {
+       element.removeEventListener(type, handler, false);
+    } else if (element.detachEvent){
+       element.detachEvent("on" + type, handler);
+    } else {
+      element[ "on" + "type" ] = null;
+    }
+  }
+}
+
+
 window.onload = function(){
 
 	var r = 0;
@@ -17,9 +41,9 @@ window.onload = function(){
       g = 0;
       b = 0;
 
-      document.getElementById('red').innerHTML = r;
-      document.getElementById('green').innerHTML = g;
-      document.getElementById('blue').innerHTML = b;
+      // document.getElementById('red').innerHTML = r;
+      // document.getElementById('green').innerHTML = g;
+      // document.getElementById('blue').innerHTML = b;
     }
 
     reset();
@@ -28,9 +52,9 @@ window.onload = function(){
      var color = '#' + padZeros(r.toString(16),2) + padZeros(g.toString(16),2) + padZeros(b.toString(16),2);
      document.getElementById('yourColor').style.backgroundColor = color;
 
-      document.getElementById('red').innerHTML = r;
-      document.getElementById('green').innerHTML = g;
-      document.getElementById('blue').innerHTML = b;
+      // document.getElementById('red').innerHTML = r;
+      // document.getElementById('green').innerHTML = g;
+      // document.getElementById('blue').innerHTML = b;
     }
 
     function randomColor(){
@@ -90,94 +114,96 @@ window.onload = function(){
 
     document.getElementById('newColor').onclick = reset;
 
-    document.getElementById("redJumpBackward").onclick = function (){
+    EventUtil.addHandler(document.getElementById("redJumpBackward"), "click", function (){
        r -= 16;
       if(r < 0){
         r = 0;
       }
       setColor();
-    };
-    document.getElementById("redStepBackward").onclick = function (){
+    });
+
+    EventUtil.addHandler(document.getElementById("redStepBackward"),"click", function (){
        r -= 1;
       if(r < 0){
         r = 0;
       }
       setColor();
-    };
-    document.getElementById("redStepForward").onclick = function (){
+    });
+
+    EventUtil.addHandler(document.getElementById("redStepForward"), "click", function (){
        r += 1;
       if(r > 255){
         r = 255;
       }
       setColor();
-    };
-    document.getElementById("redJumpForward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("redJumpForward"), "click", function (){
        r += 16;
       if(r > 255){
         r = 255;
       }
       setColor();
-    };
+    });
 
 
-    document.getElementById("greenJumpBackward").onclick = function (){
+    EventUtil.addHandler(document.getElementById("greenJumpBackward"), "click", function (){
        g -= 16;
       if(g < 0){
         g = 0;
       }
       setColor();
-    };
-    document.getElementById("greenStepBackward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("greenStepBackward"), "click", function (){
        g -= 1;
       if(g < 0){
         g = 0;
       }
       setColor();
-    };
-    document.getElementById("greenStepForward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("greenStepForward"), "click", function (){
        g += 1;
       if(g > 255){
         g = 255;
       }
       setColor();
-    };
-    document.getElementById("greenJumpForward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("greenJumpForward"), "click", function (){
        g += 16;
       if(g > 255){
         g = 255;
       }
       setColor();
-    };
+    });
 
 
-    document.getElementById("blueJumpBackward").onclick = function (){
+    EventUtil.addHandler(document.getElementById("blueJumpBackward"),"click", function (){
        b -= 16;
       if(b < 0){
         b = 0;
       }
       setColor();
-    };
-    document.getElementById("blueStepBackward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("blueStepBackward"),"click", function (){
        b -= 1;
       if(b < 0){
         b = 0;
       }
       setColor();
-    };
-    document.getElementById("blueStepForward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("blueStepForward"),"click", function (){
        b += 1;
       if(b > 255){
         b = 255;
       }
       setColor();
-    };
-    document.getElementById("blueJumpForward").onclick = function (){
+    });
+    EventUtil.addHandler(document.getElementById("blueJumpForward"),"click", function (){
        b += 16;
       if(b > 255){
         b = 255;
       }
       setColor();
-    };
+    });
 
     function padZeros(str,len){
       while(str.length < len){

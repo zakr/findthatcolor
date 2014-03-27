@@ -5,28 +5,28 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find That Color</title>
+    <title>Match That Color</title>
     <script type="text/javascript" src="color.js"></script>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/css/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="icons/foundation-icons/foundation-icons.css">
   </head>
   <body>
     
-    <div class="row">
-      <div class="small-9 columns">
-        <h1>Find That Color!</h1>
-        <p>You need to match the color on the left.</p>
-        <p>Use the buttons to add more or less of red, green &#38; blue</p>
-      </div>
-      <div class="small-3 columns">
-      <input class="tiny button radius restart" id='newColor' type='button' value="New Color">
+    <div class="row heading">
+      <div class="small-12 columns">
+        <h1 class="site-title">Match That Color!</h1>
+        <button class="tiny button right round restart" id='newColor' type='button'>Try New Color <i class="fi-loop"></i></button>
       </div>
     </div>
 
     <div class="row">
-      <div class="small-12 columns">
-
+      <div class="large-2 columns">
+        <p class="pop">Instructions</p>
+      </div>
+      <div class="large-10 columns instructions">
+        <p>You need to match the color on the left. Use the buttons to add more or less of red, green &#38; blue</p>
       </div>
     </div>
 
@@ -41,12 +41,20 @@
 
     <div class="row rgb-bar">
       <div class="small-4 columns">
-        <h4 class="rgb-name">Red</h4>
-        <ul class="button-group rgb-buttons">
-          <input id='redJumpBackward' type='button' value='<<'>
-          <input id='redStepBackward' type='button' value='<'>
-          <input id='redStepForward' type='button' value='>'>
-          <input id='redJumpForward' type='button' value='>>'>
+      <h4 class="rgb-name text-center">Red</h4>
+        <ul class="button-group rgb-buttons text-center">
+          <button class="button tiny" id='redJumpBackward' type='button' >
+            <i class="fi-minus"></i> <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='redStepBackward' type='button' >
+            <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='redStepForward' type='button' >
+            <i class="fi-plus"></i>
+          </button>
+          <button class="button tiny" id='redJumpForward' type='button' >
+            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
+          </button>
         </ul>
         
         
@@ -55,26 +63,47 @@
         <!-- <span id='red'></span> -->
       </div>
       <div class="small-4 columns">
-        <h4 class="rgb-name">Green</h4>
-        <input id='greenJumpBackward' type='button' value='<<'>
-        <input id='greenStepBackward' type='button' value='<'>
-        <input id='greenStepForward' type='button' value='>'>
-        <input id='greenJumpForward' type='button' value='>>'>
+        <h4 class="rgb-name text-center">Green</h4>
+        <ul class="button-group rgb-buttons text-center">
+          <button class="button tiny" id='greenJumpBackward' type='button' >
+            <i class="fi-minus"></i> <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='greenStepBackward' type='button' >
+            <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='greenStepForward' type='button' >
+            <i class="fi-plus"></i>
+          </button>
+          <button class="button tiny" id='greenJumpForward' type='button' >
+            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
+          </button>
+        </ul>
         <!-- <span id='green'></span> -->
       </div>
       <div class="small-4 columns">
-        <h4 class="rgb-name">Blue</h4>      
-        <input id='blueJumpBackward' type='button' value='<<'>
-        <input id='blueStepBackward' type='button' value='<'>
-        <input id='blueStepForward' type='button' value='>'>
-        <input id='blueJumpForward' type='button' value='>>'>
+        <h4 class="rgb-name text-center">Blue</h4>
+        <ul class="button-group rgb-buttons text-center">
+          <button class="button tiny" id='blueJumpBackward' type='button' >
+            <i class="fi-minus"></i> <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='blueStepBackward' type='button' >
+            <i class="fi-minus"></i>
+          </button>
+          <button class="button tiny" id='blueStepForward' type='button' >
+            <i class="fi-plus"></i>
+          </button>
+          <button class="button tiny" id='blueJumpForward' type='button' >
+            <i class="fi-plus"></i> <i class="fi-plus"></i></i>
+          </button>
+        </ul>      
+
         <!-- <span id='blue'></span> -->
       </div>
     </div>
     
     <div class="row">
       <div class="small-12 columns">
-       <input class="button expand" id='found' type='button' value="I found it!">  
+       <button class="button expand" id='found' type='button'>Does my color match?</button> 
       </div>
     </div>
     <div id='result'></div>
