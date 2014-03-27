@@ -1,7 +1,17 @@
-body, h1, h2, h3, h4, h5, h6{
-	font-family:"jaf-facitweb","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+body, h1, h2, h3, h4, h5, h6, button, .button{
+	font-family:"europa","Avenir Next","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
-
+.instructions{
+    padding: 5px;
+}
+.pop{
+    text-align: center;
+    background-color: rgb(211,54,130);
+    color:#ffffff;
+    padding:5px 5px;
+    border: 1px solid rgba(211,54,130,0.5);
+    border-radius: 2px;
+}
 .colorcontainer{
 	padding: 0;
 }
@@ -14,10 +24,20 @@ body, h1, h2, h3, h4, h5, h6{
  margin-bottom: 25px;
 }
 
+.restart, .site-title{
+    display: inline;
+}
 .restart{
-	background-color: #6c71c4;
 	margin-top: 5px;
+    letter-spacing: 1px;
 }
 .rgb-name{
-	text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.pop,.site-title{
+    letter-spacing: 2px;
+}
+.site-title{
+    font-size:1.85rem;
 }
